@@ -2,17 +2,17 @@
 
 # Use dark mode for QT apps too (like kdenlive)
 if ! yay -Q kvantum-qt5 &>/dev/null; then
-  yay -S --noconfirm kvantum-qt5
+  omarchy_install_packages kvantum-qt5
 fi
 
 # Prefer dark mode everything
 if ! yay -Q gnome-themes-extra &>/dev/null; then
-  yay -S --noconfirm gnome-themes-extra # Adds Adwaita-dark theme
+  omarchy_install_packages gnome-themes-extra # Adds Adwaita-dark theme
 fi
 
 # Allow icons to match the theme
 if ! yay -! yaru-icon-theme &>/dev/null; then
-  yay -S --noconfirm yaru-icon-theme
+  omarchy_install_packages yaru-icon-theme
 fi
 
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"

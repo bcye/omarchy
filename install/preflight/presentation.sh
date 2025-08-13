@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed gum python-terminaltexteffects
+omarchy_install_packages gum python-terminaltexteffects

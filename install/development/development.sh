@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed \
+omarchy_install_packages \
   cargo clang llvm mise \
   imagemagick \
   mariadb-libs postgresql-libs \
