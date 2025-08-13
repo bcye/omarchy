@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed \
+omarchy_install_packages \
   brightnessctl playerctl pamixer wiremix wireplumber \
   fcitx5 fcitx5-gtk fcitx5-qt wl-clip-persist \
   nautilus sushi ffmpegthumbnailer gvfs-mtp \
@@ -10,7 +10,7 @@ yay -S --noconfirm --needed \
 
 # Add screen recorder based on GPU
 if lspci | grep -qi 'nvidia'; then
-  yay -S --noconfirm --needed wf-recorder
+  omarchy_install_packages wf-recorder
 else
-  yay -S --noconfirm --needed wl-screenrec
+  omarchy_install_packages wl-screenrec
 fi

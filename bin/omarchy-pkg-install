@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Source the package installation wrapper
+source ~/.local/share/omarchy/install/preflight/package-install.sh
+
 fzf_args=(
   --multi
   --preview 'echo "alt-p: toggle description, alt-j/k: scroll, F11: maximize"; echo; yay -Sii {1}'
@@ -12,7 +15,7 @@ fzf_args=(
 pkg_name=$(yay -Slq | fzf "${fzf_args[@]}")
 
 if [[ -n "$pkg_name" ]]; then
-  yay -Sy --noconfirm "$pkg_name"
+  omarchy_install_packages "$pkg_name"
   sudo updatedb
   omarchy-show-done
 fi

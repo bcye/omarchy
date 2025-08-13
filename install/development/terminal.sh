@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed \
+omarchy_install_packages \
   wget curl unzip inetutils impala \
   fd eza fzf ripgrep zoxide bat jq xmlstarlet \
   wl-clipboard fastfetch btop \
